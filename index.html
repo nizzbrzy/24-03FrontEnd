@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,900;1,400&display=swap" rel="stylesheet">
+
+    <style>
+    * { margin: 0; padding: 0; }
+    body { background: black; color: white; font-family: 'Lato', sans-serif; font-weight: 400;}
+    div { padding: 2rem; }
+    h1 {font-size: calc(2rem + 2vw); font-weight: 900; padding: 0 0 1.5rem 0;
+    }
+    p {
+      padding: 1rem 0 0 0; }
+    @media (min-width: 800px) { p { max-width: 60%; } }
+    </style>
+    <title>Hola mundo!</title><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js" integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script></head>
+
+    <body>><div>
+    <h1><span id= "saludo"></span> Me llamo <span id="nombre"></span></h1>
+    <p>Este electivo lo elegí porque no tenía conocimiento sobre esta rama del diseño, por lo que me parece algo fundamental e importante de aprender dentro del proceso de carrera.</p>
+    <p>Creo que este electivo me hará ampliar más mis conocimientos gráficos y de programación para aplicarlas en el mundo del diseño.</p>
+
+    </div>
+    <script>
+    var opciones = ["Hola.", "Qué pasa.", "Namasté."];
+    function setup() {
+   createCanvas(windowWidth - 40, windowHeight - 40).position(20, 20).style("z-index", -1);
+   document.getElementById("nombre").textContent += "Nicolás Galaz";
+   document.getElementById("saludo").textContent += random (opciones);
+}
+function draw() {
+  colorMode(RGB,300,100,100);
+   background(16,6,159);
+   textSize(100);
+   text("🌀", mouseX, mouseY);
+
+
+
+}
+function windowResized() {
+   resizeCanvas(windowWidth - 40, windowHeight - 40);
+}
+
+    </script></body>
+</html>
